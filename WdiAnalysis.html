@@ -115,7 +115,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="loading-packages-and-data-for-analysis" class="level3">
 <h3 class="anchored" data-anchor-id="loading-packages-and-data-for-analysis">Loading Packages and Data for Analysis</h3>
-<div id="5330fbe6" class="cell" data-execution_count="1">
+<div id="ea9bc0f6" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#importing packages</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -128,7 +128,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="running-analysis-on-the-code" class="level3">
 <h3 class="anchored" data-anchor-id="running-analysis-on-the-code">Running Analysis on the Code</h3>
-<div id="ea504436" class="cell" data-execution_count="2">
+<div id="aed0499f" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># exploratory analysis</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(wdi.describe()) </span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># focusing on adult_literacy_rate</span></span>
@@ -192,7 +192,7 @@ max          85.377000      1.417173e+09  </code></pre>
 <h3 class="anchored" data-anchor-id="plotting-the-data">Plotting the Data</h3>
 <div id="cell-fig-gdp-vs-infl" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
-<div id="fig-gdp-vs-infl" class="quarto-float quarto-figure quarto-figure-center anchored" height="538" width="693">
+<div id="fig-gdp-vs-infl" class="quarto-float quarto-figure quarto-figure-center anchored" width="693" height="538">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-gdp-vs-infl-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="WdiAnalysis_files/figure-html/fig-gdp-vs-infl-output-1.png" id="fig-gdp-vs-infl" width="693" height="538" class="figure-img">
@@ -206,10 +206,10 @@ Figure&nbsp;1
 </div>
 <p><em>Figure 1: Scatter plot showing the relationship between GDP per capita and total population.</em></p>
 <p>Source: World Development Indicators dataset.</p>
-<p>According to <strong>?@fig-gdp-vs-pop</strong> countries with high inflation rates generally seem to have low GDP per capita values. Further analysis is needed to derive a correlation, especially regarding the lower inflation countries.</p>
+<p>According to <a href="#fig-gdp-vs-infl" class="quarto-xref">Figure&nbsp;1</a> countries with high inflation rates generally seem to have low GDP per capita values. Further analysis is needed to derive a correlation, especially regarding the lower inflation countries.</p>
 <div id="cell-fig-edu-vs-lit" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display">
-<div id="fig-edu-vs-lit" class="quarto-float quarto-figure quarto-figure-center anchored" height="526" width="667">
+<div id="fig-edu-vs-lit" class="quarto-float quarto-figure quarto-figure-center anchored" width="667" height="526">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-edu-vs-lit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="WdiAnalysis_files/figure-html/fig-edu-vs-lit-output-1.png" id="fig-edu-vs-lit" width="667" height="526" class="figure-img">
@@ -226,7 +226,7 @@ Figure&nbsp;2
 <p><a href="#fig-edu-vs-lit" class="quarto-xref">Figure&nbsp;2</a> is very sparse and has very few data points. This is an example of a plot from which conclusions cannot be drawn. We should be very cautious of plots like these as they are missing lots of data!</p>
 <div id="cell-fig-life-vs-unemp" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
-<div id="fig-life-vs-unemp" class="quarto-float quarto-figure quarto-figure-center anchored" height="523" width="628">
+<div id="fig-life-vs-unemp" class="quarto-float quarto-figure quarto-figure-center anchored" width="628" height="523">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-life-vs-unemp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="WdiAnalysis_files/figure-html/fig-life-vs-unemp-output-1.png" id="fig-life-vs-unemp" width="628" height="523" class="figure-img">
