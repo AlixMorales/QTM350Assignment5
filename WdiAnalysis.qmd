@@ -1,0 +1,121 @@
+---
+title: "WDI Data Analysis"
+author: "Alix Morales"
+date: "2024-10-08"
+output:
+  html_document:
+    toc: true    
+    theme: cosmo 
+  pdf_document:
+    toc: true    
+   # latex_engine: xelatex  # Specify LaTeX engine 
+bibliography: bibliography.bib   
+---
+
+### Loading Packages and Data for Analysis
+```{python}
+#importing packages
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# loading data
+wdi = pd.read_csv("wdi.csv")
+``` 
+
+### Running Analysis on the Code
+```{python}
+# exploratory analysis
+print(wdi.describe()) 
+# focusing on adult_literacy_rate
+# income_inequality
+# gdp_per_capita
+```
+
+The GDP per capita variable is very interesting as it shows the massive disparities in wealth between countries, providing context for a lot of the other variables (min: 259, max: 240862). Adult literacy rate is interesting since there are only 20 entries and a lot of missing data. Likewise, income inequality is missing a significant amount of data. 
+
+### Plotting the Data
+```{python}
+#| label: fig-gdp-vs-infl
+#| echo: false
+## 1. GDP per capita over inflation rate
+plt.figure(figsize=(8, 6))
+sns.scatterplot(data=wdi, x='inflation_rate', y='gdp_per_capita')
+plt.title("GDP per Capita Over Inflation Rate")
+plt.xlabel("Inflation Rate")
+plt.ylabel("GDP per Capita")
+plt.xticks(rotation=45)
+plt.show()
+```
+
+*Figure 1: Scatter plot showing the relationship between GDP per capita and total population.*
+
+Source: World Development Indicators dataset.
+
+According to @fig-gdp-vs-pop countries with high inflation rates generally seem to have low GDP per capita values. Further analysis is needed to derive a correlation, especially regarding the lower inflation countries.
+
+```{python}
+#| label: fig-edu-vs-lit
+#| echo: false
+## 2. literacy rates over education expenditure relative to gdp
+plt.figure(figsize=(8, 6))
+sns.scatterplot(data=wdi, x='education_expenditure_gdp_share', y='adult_literacy_rate')
+plt.title("Literacy Rates Over Education Expenditure")
+plt.xlabel("Education Expenditure (as percentage of GDP)")
+plt.ylabel("Adult Literacy Rates")
+plt.xticks(rotation=45)
+plt.show()
+```
+
+*Figure 2: Scatter plot showing the relationship between Literacy Rates and education expenditure.*
+
+Source: World Development Indicators dataset.
+
+@fig-edu-vs-lit is very sparse and has very few data points. This is an example of a plot from which conclusions cannot be drawn. We should be very cautious of plots like these as they are missing lots of data!
+
+```{python}
+#| label: fig-life-vs-unemp
+#| echo: false
+## 3. Unemployment Rate vs Life Expectancy (HEXBIN)
+plt.figure(figsize=(8, 6))
+plt.hexbin(wdi['life_expectancy'], wdi['unemployment_rate'], gridsize=30, cmap='Blues')
+plt.colorbar(label='Count')
+plt.title("Life Expectancy and Unemployment Rate")
+plt.xlabel("Life Expectancy")
+plt.ylabel("Unemployment Rate")
+plt.show()
+
+```
+
+*Figure 3: Scatter plot showing the relationship between Life Expectancy and Unemployment Rate.*
+
+Source: World Development Indicators dataset.
+
+According to @fig-life-vs-unemp countries with high life expectancies generally seem to have low unemployment rates. This is likely the result of powerful countries having stronger economies and healthcare systems. 
+
+### Key Statistics
+
+The table below highlights the variables used
+
+```{python}
+#| label: tbl-key-stats
+#| echo: false
+import pandas as pd
+
+# eliminates the scientific notation
+pd.options.display.float_format = '{:.2f}'.format
+
+# Summary Table
+key_stats = wdi[['gdp_per_capita', 'inflation_rate', 'adult_literacy_rate', 'education_expenditure_gdp_share', 'life_expectancy', 'unemployment_rate']].agg({
+    'gdp_per_capita': ['mean', 'min', 'max'],
+    'inflation_rate': ['mean', 'min', 'max'],
+    'adult_literacy_rate': ['mean', 'min', 'max'],
+    'education_expenditure_gdp_share': ['mean', 'min', 'max'],
+    'life_expectancy': ['mean', 'min', 'max'],
+    'unemployment_rate': ['mean', 'min', 'max']
+})
+
+# Convert the summary table to a Markdown format
+key_stats.T
+```

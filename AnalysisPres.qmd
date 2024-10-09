@@ -1,0 +1,59 @@
+---
+title: "WDI Data Analysis"
+author: "Alix Morales"
+date: "2024-10-08"
+format: 
+  revealjs:
+    theme: night
+    transition: fade
+    smaller: true
+    scrollable: true
+bibliography: bibliography.bib 
+---
+
+
+## Introduction
+
+This presentation will explore relationships between GDP, life expectancy, unemployment rates, and more across various countries. This data uses data from the World Bank [@worldbank]
+
+We will examine:
+
+- GDP per capita vs inflation
+- Education expenditure and literacy rates
+- life expectancy and employment
+
+---
+
+## Analyzing GDP per Capita vs Inflation Rates
+
+The analysis shows:
+
+- High inflation rates generally = low GDP per capita
+- All high GDP per capita countries have low inflation
+![GDP per Capita vs Inflation Rate](WdiAnalysis_files/figure-html/fig-gdp-vs-infl-output-1.png)
+
+---
+
+## Analyzing Education Expenditure as GDP Share vs Adult Literacy Rates
+
+Notes on the Analysis:
+
+- Very little data is available
+    - Hard to derive conclusions!
+    - Be cautious of plots like these!
+    - Important to know your data!
+![Education Expenditure as GDP Share vs Adult Literacy Rates](WdiAnalysis_files/figure-html/fig-edu-vs-lit-output-1.png)
+
+---
+
+## Analyzing Life Expectancy vs Employment Rates
+
+Notes on the Analysis:
+
+- Very little data is available
+    - Hard to derive conclusions!
+    - Be cautious of plots like these!
+    - Important to know your data!
+![Life Expectancy vs Employment Rates](WdiAnalysis_files/figure-html/fig-life-vs-unemp-output-1.png)
+
+---
