@@ -33,7 +33,7 @@ print(wdi.describe())
 # gdp_per_capita
 ```
 
-The GDP per capita variable is very interesting as it shows the massive disparities in wealth between countries, providing context for a lot of the other variables (min: 259, max: 240862). Adult literacy rate is interesting since there are only 20 entries and a lot of missing data. Likewise, income inequality is missing a significant amount of data. 
+The GDP per capita variable is very interesting as it shows the massive disparities in wealth between countries, providing context for a lot of the other variables (min: 259, max: 240862). Adult literacy rate is interesting since there are only 20 entries and a lot of missing data. Likewise, income inequality is missing a significant amount of data.
 
 ### Plotting the Data
 ```{python}
@@ -102,6 +102,9 @@ The table below highlights the variables used
 #| label: tbl-key-stats
 #| echo: false
 import pandas as pd
+
+# used chatgpt to help eliminate scientific notation
+# and for the table format
 
 # eliminates the scientific notation
 pd.options.display.float_format = '{:.2f}'.format

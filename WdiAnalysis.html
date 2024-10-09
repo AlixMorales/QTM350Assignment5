@@ -115,7 +115,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="loading-packages-and-data-for-analysis" class="level3">
 <h3 class="anchored" data-anchor-id="loading-packages-and-data-for-analysis">Loading Packages and Data for Analysis</h3>
-<div id="27cfe145" class="cell" data-execution_count="1">
+<div id="a67153f9" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#importing packages</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -128,7 +128,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="running-analysis-on-the-code" class="level3">
 <h3 class="anchored" data-anchor-id="running-analysis-on-the-code">Running Analysis on the Code</h3>
-<div id="5086373e" class="cell" data-execution_count="2">
+<div id="bf6b869f" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># exploratory analysis</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(wdi.describe()) </span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># focusing on adult_literacy_rate</span></span>
@@ -136,57 +136,57 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># gdp_per_capita</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>       inflation_rate  exports_gdp_share  gdp_growth_rate  gdp_per_capita  \
-count      169.000000         169.000000       202.000000      203.000000   
-mean        12.493936          46.170395         4.368901    20345.707649   
-std         19.682433          34.001404         6.626811    31308.942225   
-min         -6.687321           1.571162       -28.758591      259.025031   
-25%          5.518129          24.526642         2.438593     2570.563284   
-50%          7.967574          40.221277         4.204431     7587.588173   
-75%         11.665567          55.460067         6.200000    25982.630050   
-max        171.205491         211.278206        63.439864   240862.182448   
+count          169.00             169.00           202.00          203.00   
+mean            12.49              46.17             4.37        20345.71   
+std             19.68              34.00             6.63        31308.94   
+min             -6.69               1.57           -28.76          259.03   
+25%              5.52              24.53             2.44         2570.56   
+50%              7.97              40.22             4.20         7587.59   
+75%             11.67              55.46             6.20        25982.63   
+max            171.21             211.28            63.44       240862.18   
 
        adult_literacy_rate  primary_school_enrolment_rate  \
-count            49.000000                     114.000000   
-mean             79.574801                     100.874048   
-std              19.375539                      12.037532   
-min              27.280001                      64.395401   
-25%              72.400002                      94.191751   
-50%              83.779999                     100.022247   
-75%              95.500000                     105.035866   
-max              99.999977                     138.192001   
+count                49.00                         114.00   
+mean                 79.57                         100.87   
+std                  19.38                          12.04   
+min                  27.28                          64.40   
+25%                  72.40                          94.19   
+50%                  83.78                         100.02   
+75%                  95.50                         105.04   
+max                 100.00                         138.19   
 
        education_expenditure_gdp_share  measles_immunisation_rate  \
-count                       105.000000                 193.000000   
-mean                          4.226215                  83.854922   
-std                           2.069486                  15.996083   
-min                           1.027000                   0.000000   
-25%                           2.898000                  76.000000   
-50%                           3.887000                  90.000000   
-75%                           5.156000                  96.000000   
-max                          16.582462                  99.000000   
+count                           105.00                     193.00   
+mean                              4.23                      83.85   
+std                               2.07                      16.00   
+min                               1.03                       0.00   
+25%                               2.90                      76.00   
+50%                               3.89                      90.00   
+75%                               5.16                      96.00   
+max                              16.58                      99.00   
 
        health_expenditure_gdp_share  income_inequality  unemployment_rate  \
-count                     20.000000          28.000000         186.000000   
-mean                       9.044045          38.328571           7.268661   
-std                        2.703549           7.721488           5.827726   
-min                        5.100000          26.400000           0.130000   
-25%                        7.263266          32.900000           3.500750   
-50%                        8.925000          38.100000           5.537500   
-75%                       10.632500          43.125000           9.455250   
-max                       16.571152          54.800000          37.852000   
+count                         20.00              28.00             186.00   
+mean                           9.04              38.33               7.27   
+std                            2.70               7.72               5.83   
+min                            5.10              26.40               0.13   
+25%                            7.26              32.90               3.50   
+50%                            8.93              38.10               5.54   
+75%                           10.63              43.12               9.46   
+max                           16.57              54.80              37.85   
 
        life_expectancy  total_population  
-count       209.000000      2.170000e+02  
-mean         72.416519      3.653645e+07  
-std           7.713322      1.410583e+08  
-min          52.997000      1.131200e+04  
-25%          66.782000      8.087260e+05  
-50%          73.514634      6.465097e+06  
-75%          78.475000      2.606942e+07  
-max          85.377000      1.417173e+09  </code></pre>
+count           209.00            217.00  
+mean             72.42       36536447.72  
+std               7.71      141058261.99  
+min              53.00          11312.00  
+25%              66.78         808726.00  
+50%              73.51        6465097.00  
+75%              78.47       26069416.00  
+max              85.38     1417173173.00  </code></pre>
 </div>
 </div>
-<p>The GDP per capita variable is very interesting as it shows the massive disparities in wealth between countries, providing context for a lot of the other variables (min: 259, max: 240862). Adult literacy rate is interesting since there are only 20 entries and a lot of missing data. Likewise, income inequality is missing a significant amount of data.</p>
+<p>The GDP per capita variable is very interesting as it shows the massive disparities in wealth between countries, providing context for a lot of the other variables (min: 259, max: 240862). Adult literacy rate is interesting since there are only 20 entries and a lot of missing data. Likewise, income inequality is missing a significant amount of data. See <strong>?@tbl-key-stats</strong> for more info on the stats used in the analyses.</p>
 </section>
 <section id="plotting-the-data" class="level3">
 <h3 class="anchored" data-anchor-id="plotting-the-data">Plotting the Data</h3>
@@ -246,7 +246,7 @@ Figure&nbsp;3
 <h3 class="anchored" data-anchor-id="key-statistics">Key Statistics</h3>
 <p>The table below highlights the variables used</p>
 <div id="tbl-key-stats" class="cell anchored" data-execution_count="6">
-<div class="cell-output cell-output-display" data-execution_count="6">
+<div class="cell-output cell-output-display" data-execution_count="12">
 <div>
 
 
